@@ -9,16 +9,13 @@ const FoodList = ({ pizzaList }) => {
   // console.log("PizzaList:" + pizzaList.data);
   return (
     <>
-      <ImageList
-        // sx={{ width: 500, height: 450 }}
-        variant="woven"
-        cols={3}
-        gap={15}
-      >
-        {pizzaList.data.map((item) => (
-          <PizzaCard item={item} key={item._id} />
-        ))}
-      </ImageList>
+      <Box>
+        <ImageList variant="masonry" cols={3} gap={8}>
+          {pizzaList.data.map((item) => (
+            <PizzaCard item={item} key={item._id} />
+          ))}
+        </ImageList>
+      </Box>
     </>
   );
 };
